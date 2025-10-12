@@ -1,182 +1,70 @@
-/* style.css
-   Single CSS file used by all pages.
-   Demonstrates:
-    - Element selectors (header, footer, h1, p)
-    - Class selectors (.menu, .container, .brand)
-    - ID selector (#main-title)
-    - Flexbox for header/menu and CSS Grid for main container
-    - hover effects, paddings, margins, borders, coloring, font settings
-*/
+/* === style.css === */
 
-/* Reset-ish */
-* {
-  box-sizing: border-box;
+/* Reset default margins */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Body / font settings */
-body {
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f7fb;
-  color: #212121;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+/* Navigation menu */
+nav {
+  background-color: #004080;
+  padding: 10px 0;
+  text-align: center;
 }
 
-/* Header: use flexbox for layout */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 24px;
-  background: linear-gradient(90deg, #1d3557 0%, #457b9d 100%);
-  color: #fff;
-  gap: 20px;
-}
-
-/* Brand area in header */
-.brand {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ID selector example */
-#main-title {
-  font-size: 1.25rem;
-  margin-bottom: 6px;
-}
-
-/* Subtitle style */
-.subtitle {
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-/* Navigation menu (class selector) */
-.menu {
-  display: flex;
-  gap: 12px;
-}
-
-/* Links inside the menu */
-.menu a {
-  color: #ffffff;
+nav a {
+  color: white;
   text-decoration: none;
+  margin: 0 15px;
   padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  transition: background-color 0.18s ease, transform 0.12s ease;
+  transition: background-color 0.3s;
 }
 
-/* Hover effect on links (requirement) */
-.menu a:hover,
-.menu a:focus {
-  background-color: rgba(255, 255, 255, 0.12);
-  transform: translateY(-2px);
-  border-color: rgba(255,255,255,0.12);
+nav a:hover {
+  background-color: #0073e6;
+  border-radius: 5px;
 }
 
-/* Container: use CSS grid for main content layout */
-.container {
-  /* grid with one column by default; this shows grid usage */
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 1100px;
-  margin: 22px auto;
+/* Page layout */
+main {
   padding: 20px;
-}
-
-/* Styling for sections and articles */
-main section,
-main article {
-  background: #ffffff;
-  border: 1px solid #e1e7ee;
-  border-radius: 10px;
-  padding: 18px;
-  box-shadow: 0 2px 4px rgba(29,45,66,0.04);
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
 }
 
 /* Headings */
 h1, h2, h3 {
-  color: #0b2545;
-  margin-bottom: 10px;
+  color: #004080;
 }
 
-/* Paragraphs */
-p {
-  margin-bottom: 12px;
+/* Example of flex layout */
+.section-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Lists styling */
-ul, ol {
-  margin-left: 1.25rem;
-  margin-bottom: 12px;
-}
-
-/* Table styling */
-.toc-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.toc-table th,
-.toc-table td {
-  border: 1px solid #d7e0ea;
+.section {
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid #ddd;
   padding: 10px;
-  text-align: left;
-}
-.toc-table th {
-  background: #f0f6fb;
+  border-radius: 5px;
+  background-color: #fafafa;
 }
 
-/* Image styling */
-.hero-img {
-  max-width: 100%;
-  display: block;
-  margin: 12px 0;
-  border-radius: 8px;
-  border: 1px solid #dfeaf6;
-}
-
-/* Caption */
-.caption {
-  font-size: 0.9rem;
-  color: #5a6b7a;
-}
-
-/* Concept cards (class -> element combos to show selectors) */
-.concept h3 {
-  margin-bottom: 6px;
-}
-.concept p {
-  margin-left: 8px;
-}
-
-/* Footer element selector */
+/* Footer */
 footer {
-  margin-top: auto; /* push footer to bottom for tall content */
-  background: #0e2747;
-  color: #fff;
   text-align: center;
-  padding: 14px 12px;
-}
-
-/* Footer link hover */
-footer a {
-  color: #ffd966;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive: make container two-column on wider screens */
-@media (min-width: 900px) {
-  .container {
-    grid-template-columns: 1fr 380px; /* main + sidebar layout */
-  }
-
-  /* For pages where a single-column layout is needed, you can override with a page-specific class */
+  padding: 15px;
+  background-color: #004080;
+  color: white;
+  font-size: 0.9em;
+  margin-top: 30px;
 }
