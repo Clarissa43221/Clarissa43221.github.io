@@ -1,109 +1,38 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Evolution and Importance of HTTP — Home</title>
-  <link rel="stylesheet" href="style.css">
-  <!--
-    Homepage: contains title, brief intro/abstract, key terms, and table of contents linking to other pages.
-    Comments are included for documentation (required by the project).
-  -->
+    <meta charset="UTF-8">
+    <title>HTTP Evolution</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <h1 id="main-title">The Evolution and Importance of HTTP</h1>
-      <p class="subtitle">Clarissa Allen — Intro to Web Development — 09/14/2025</p>
-    </div>
-
-    <nav class="menu">
-      <!-- Main menu (consistent on every page) -->
-      <a href="index.html">Home</a>
-      <a href="Topic1.html">Origins & Early HTTP</a>
-      <a href="Topic2.html">Modern Evolution & Future</a>
-      <a href="Concepts.html">Key Concepts</a>
-      <a href="References.html">References</a>
-      <a href="About.html">About</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="topic1.html">Topic 1</a>
+        <a href="topic2.html">Topic 2</a>
+        <a href="key_concepts.html">Key Concepts</a>
+        <a href="about.html">About</a>
+        <a href="references.html">References</a>
     </nav>
-  </header>
 
-  <main class="container">
-    <!-- Abstract / Intro -->
-    <section>
-      <h2>Description</h2>
-      <p>
-        The internet is built on layered technologies that enable computers to
-        communicate. One of the most important is the Hypertext Transfer Protocol (HTTP).
-        Whether streaming video, clicking links, or shopping online, HTTP handles
-        the requests and responses that make the web possible. This site summarizes the
-        origins, evolution, and current/future directions of HTTP.
-      </p>
-    </section>
+    <main>
+        <h1>The Evolution and Importance of HTTP</h1>
+        <p>Welcome! This website explores HTTP, the protocol that makes the web possible. You will learn about its history, versions, key concepts, and future directions.</p>
 
-    <!-- Key Terms (table of contents like) -->
-    <section>
-      <h2>Key Terms</h2>
-      <ul>
-        <li><strong>HTTP</strong> — Hypertext Transfer Protocol</li>
-        <li><strong>HTTPS</strong> — HTTP over TLS/SSL (secure)</li>
-        <li><strong>TCP/IP</strong> — Core transport/networking stack</li>
-        <li><strong>QUIC</strong> — UDP-based transport protocol used by HTTP/3</li>
-        <li><strong>Multiplexing</strong> — Sending multiple requests simultaneously</li>
-      </ul>
-    </section>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="topic1.html">Topic 1: HTTP History & Early Versions</a></li>
+            <li><a href="topic2.html">Topic 2: HTTP/1.1, HTTP/2, HTTP/3 & HTTPS</a></li>
+            <li><a href="key_concepts.html">Key Concepts</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </main>
 
-    <!-- Table of contents with short descriptions -->
-    <section>
-      <h2>Table of Contents</h2>
-      <table class="toc-table">
-        <thead>
-          <tr>
-            <th>Page</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="topic1.html">Origins & Early HTTP</a></td>
-            <td>History, HTTP/0.9, HTTP/1.0, and the early design decisions.</td>
-          </tr>
-          <tr>
-            <td><a href="topic2.html">Modern Evolution & Future</a></td>
-            <td>HTTP/1.1, HTTP/2, HTTP/3, QUIC, and how they improve speed & reliability.</td>
-          </tr>
-          <tr>
-            <td><a href="concepts.html">Key Concepts</a></td>
-            <td>Concise explanations of 5–7 important concepts related to HTTP.</td>
-          </tr>
-          <tr>
-            <td><a href="references.html">References & Resources</a></td>
-            <td>Work cited and helpful learning resources with links.</td>
-          </tr>
-          <tr>
-            <td><a href="about.html">About</a></td>
-            <td>Mini-resume and project notes.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Example image (placeholder) -->
-    <section>
-      <h2>Illustration</h2>
-      <!-- Replace with your image file inside images/ folder -->
-      <img src="images/http-diagram.jpg" alt=" Diagram showing web browser requesting a page from a server" class="hero-img">
-      <p class="caption">A simplified diagram of a browser making an HTTP request to a web server.</p>
-    </section>
-  </main>
-
-  <footer>
-    <!-- Footer must indicate class project and link to course website -->
-    <p>This is a class project for IT 3203. Course site:
-      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">IT 3203</a>.
-    </p>
-    <p>&copy; 2025 Clarissa Allen</p>
-  </footer>
+    <footer>
+        Class Project - <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a>
+    </footer>
+</body>
+</html>
 </body>
 </html>
