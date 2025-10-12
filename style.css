@@ -9,7 +9,7 @@ body {
   color: #333;
 }
 
-/* --- Links --- */
+/* Links */
 a {
   color: #2d8658;       
   text-decoration: none;
@@ -42,7 +42,7 @@ nav a {
   transition: background-color 0.3s;
 }
 
-nav a:hover {
+nav a: hover {
   background-color: #b3e6cc;
   border-radius: 5px;
 }
