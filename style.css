@@ -9,6 +9,24 @@ body {
   color: #333;
 }
 
+/* --- Links --- */
+a {
+  color: #2d8658;       
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a: hover {
+  color: #1f5a3d;
+  text-decoration: underline;
+}
+
+a: visited {
+  color: #1a4731;
+}
+
+
 /* Navigation menu */
 nav {
   background-color: #79d2a6;
