@@ -18,13 +18,27 @@
     <main>
         <h1>Key Concepts</h1>
         <ul>
-            <li><strong>HTTP:</strong> Protocol for browser-server communication.</li>
-            <li><strong>HTTPS:</strong> Secure HTTP using encryption (SSL/TLS).</li>
-            <li><strong>Persistent Connections:</strong> Reuse connections to speed up websites.</li>
-            <li><strong>Multiplexing:</strong> Multiple requests over one connection (HTTP/2).</li>
-            <li><strong>QUIC:</strong> Transport protocol for HTTP/3 to reduce latency.</li>
-            <li><strong>Headers:</strong> Extra info sent with requests/responses.</li>
-            <li><strong>Error Codes:</strong> Messages like 404 Not Found.</li>
+            <li>
+                <strong>HTTP:</strong> HTTP (Hypertext Transfer Protocol) is the language used for communication between browsers and web servers. It defines how requests and responses are sent, allowing websites to function. Every time you click a link or load a page, HTTP is the protocol making it happen.
+            </li>
+            <li>
+                <strong>HTTPS:</strong> HTTPS is the secure version of HTTP that encrypts communication using SSL/TLS. It protects sensitive information such as passwords and credit card numbers from being intercepted. Modern websites almost always use HTTPS to provide security and build user trust.
+            </li>
+            <li>
+                <strong>Persistent Connections:</strong> Persistent connections allow multiple HTTP requests and responses to use the same network connection. This reduces delays and speeds up page loading compared to opening a new connection for every request. HTTP/1.1 introduced this feature to improve performance.
+            </li>
+            <li>
+                <strong>Multiplexing:</strong> Multiplexing allows multiple requests to be sent at the same time over a single connection. This feature is part of HTTP/2 and helps websites load faster by reducing waiting time. It is especially useful for pages with many images, videos, or scripts.
+            </li>
+            <li>
+                <strong>QUIC:</strong> QUIC is a transport protocol used by HTTP/3 that runs on top of UDP instead of TCP. It improves speed and reduces latency, especially on mobile or unstable networks. QUIC also helps prevent data loss and supports real-time applications like video calls and online games.
+            </li>
+            <li>
+                <strong>Headers:</strong> Headers are pieces of information sent along with HTTP requests and responses. They can include details about the browser, server, type of content, caching instructions, or security policies. Headers make HTTP more flexible and allow websites to behave correctly under different conditions.
+            </li>
+            <li>
+                <strong>Error Codes:</strong> HTTP error codes indicate when something has gone wrong with a request. For example, "404 Not Found" means the requested page does not exist, while "500 Internal Server Error" indicates a problem on the server. These codes help users and developers troubleshoot website issues.
+            </li>
         </ul>
     </main>
 
