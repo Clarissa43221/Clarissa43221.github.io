@@ -77,6 +77,28 @@ h1, h2, h3 {
   background-color: #fafafa;
 }
 
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #2d8658;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #2d8658;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 /* Footer */
 footer {
   text-align: center;
