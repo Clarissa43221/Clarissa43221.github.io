@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Topic1.html">Topic 1</a>
+        <a href="Topic2.html">Topic 2</a>
+        <a href="Concepts.html">Key Concepts</a>
+        <a href="References.html">References</a>
+        <a href="About.html">About</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <main>
+        <h1>HTTP Self-Assessment Quiz</h1>
+        <p>Test your understanding of HTTP and its evolution!</p>
+
+        <!-- QUIZ FORM -->
+        <form id="quizForm">
+
+            <!-- Question 1: Fill in the blank -->
+            <h3>1. Fill in the blank</h3>
+            <label>What protocol does HTTP/3 use for transport?</label><br>
+            <input type="text" id="q1" placeholder="Type your answer here">
+
+            <!-- Question 2 -->
+            <h3>2. Which version of HTTP introduced persistent connections?</h3>
+            <label><input type="radio" name="q2" value="0"> HTTP/0.9</label><br>
+            <label><input type="radio" name="q2" value="1"> HTTP/1.1</label><br>
+            <label><input type="radio" name="q2" value="2"> HTTP/3</label><br>
+
+            <!-- Question 3 -->
+            <h3>3. What major feature did HTTP/2 introduce?</h3>
+            <label><input type="radio" name="q3" value="0"> SSL encryption</label><br>
+            <label><input type="radio" name="q3" value="1"> Multiplexing</label><br>
+            <label><input type="radio" name="q3" value="2"> Chunked transfer</label><br>
+
+            <!-- Question 4 -->
+            <h3>4. Who originally created the World Wide Web and HTTP?</h3>
+            <label><input type="radio" name="q4" value="0"> Steve Jobs</label><br>
+            <label><input type="radio" name="q4" value="1"> Tim Berners-Lee</label><br>
+            <label><input type="radio" name="q4" value="2"> Mark Zuckerberg</label><br>
+
+            <!-- Question 5: Multi-select -->
+            <h3>5. Select ALL improvements introduced in HTTP/3:</h3>
+            <label><input type="checkbox" id="q5a" value="1"> Uses QUIC</label><br>
+            <label><input type="checkbox" id="q5b" value="1"> Lower latency</label><br>
+            <label><input type="checkbox" id="q5c" value="0"> Built on TCP</label><br>
+            <label><input type="checkbox" id="q5d" value="1"> Better for unstable networks</label><br>
+
+            <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+            <button type="reset" onclick="resetResults()">Reset</button>
+        </form>
+
+        <!-- Results output -->
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <p>This is a class project for IT3203 • <a href="https://ksuweb.github.io/IT3203/">Course Link</a></p>
+    </footer>
+
+
+    <!-- JAVASCRIPT GRADING LOGIC -->
+    <script>
+        function gradeQuiz() {
+            let score = 0;
+            let total = 5;
+            let output = "";
+
+            // Question 1 – fill in blank (correct answer: QUIC)
+            let q1 = document.getElementById("q1").value.trim().toLowerCase();
+            if (q1 === "quic") { score++; output += "<p><strong>Q1 Correct!</strong></p>"; }
+            else { output += "<p><strong>Q1 Incorrect.</strong> Correct answer: QUIC</p>"; }
+
+            // Question 2 – correct: HTTP/1.1 (value 1)
+            let q2 = document.querySelector("input[name='q2']:checked");
+            if (q2 && q2.value == "1") { score++; output += "<p>Q2 Correct!</p>"; }
+            else { output += "<p>Q2 Incorrect. Correct answer: HTTP/1.1</p>"; }
+
+            // Question 3 – correct: Multiplexing (value 1)
+            let q3 = document.querySelector("input[name='q3']:checked");
+            if (q3 && q3.value == "1") { score++; output += "<p>Q3 Correct!</p>"; }
+            else { output += "<p>Q3 Incorrect. Correct answer: Multiplexing</p>"; }
+
+            // Question 4 – correct: Tim Berners-Lee (value 1)
+            let q4 = document.querySelector("input[name='q4']:checked");
+            if (q4 && q4.value == "1") { score++; output += "<p>Q4 Correct!</p>"; }
+            else { output += "<p>Q4 Incorrect. Correct answer: Tim Berners-Lee</p>"; }
+
+            // Question 5 – multi-select (correct answers: a=1, b=1, d=1)
+            let correct = 
+                document.getElementById("q5a").checked &&
+                document.getElementById("q5b").checked &&
+                !document.getElementById("q5c").checked &&
+                document.getElementById("q5d").checked;
+
+            if (correct) { score++; output += "<p>Q5 Correct!</p>"; }
+            else { output += "<p>Q5 Incorrect. Correct answers: QUIC, Lower latency, Better for unstable networks</p>"; }
+
+            // Final score display
+            let passFail = score >= 3 ? "PASS" : "FAIL";
+            let color = score >= 3 ? "green" : "red";
+
+            document.getElementById("results").innerHTML =
+                `<h2 style='color:${color};'>${passFail} — Score: ${score}/${total}</h2>` + output;
+        }
+
+        function resetResults() {
+            document.getElementById("results").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
