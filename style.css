@@ -108,3 +108,40 @@ footer {
   font-size: 0.9em;
   margin-top: 30px;
 }
+
+form {
+    background: #f8fff8;
+    padding: 20px;
+    border: 2px solid #2d8658;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background: #2d8658;
+    color: white;
+}
+
+button[type="reset"] {
+    background: #ccc;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 15px;
+}
