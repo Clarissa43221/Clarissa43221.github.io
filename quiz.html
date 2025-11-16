@@ -23,7 +23,7 @@
         <h1>HTTP Self-Assessment Quiz</h1>
         <p>Test your understanding of HTTP and its evolution!</p>
 
-        <!-- QUIZ FORM -->
+        <!-- Quiz Form -->
         <form id="quizForm">
 
             <!-- Question 1: Fill in the blank -->
@@ -31,19 +31,19 @@
             <label>What protocol does HTTP/3 use for transport?</label><br>
             <input type="text" id="q1" placeholder="Type your answer here">
 
-            <!-- Question 2 (Option 1 is correct now) -->
+            <!-- Question 2 Multiple Choice -->
             <h3>2. Which version of HTTP introduced persistent connections?</h3>
             <label><input type="radio" name="q2" value="1"> HTTP/0.9</label><br>
             <label><input type="radio" name="q2" value="0"> HTTP/1.1</label><br>
             <label><input type="radio" name="q2" value="2"> HTTP/3</label><br>
 
-            <!-- Question 3 (Option 3 is correct now) -->
+            <!-- Question 3  Multiple Choice -->
             <h3>3. What major feature did HTTP/2 introduce?</h3>
             <label><input type="radio" name="q3" value="0"> SSL encryption</label><br>
             <label><input type="radio" name="q3" value="1"> Multiplexing</label><br>
             <label><input type="radio" name="q3" value="correct"> Chunked transfer</label><br>
 
-            <!-- Question 4 (Option 1 is correct now) -->
+            <!-- Question 4  Multiple Choice -->
             <h3>4. Who originally created the World Wide Web and HTTP?</h3>
             <label><input type="radio" name="q4" value="1"> Steve Jobs</label><br>
             <label><input type="radio" name="q4" value="0"> Tim Berners-Lee</label><br>
@@ -68,7 +68,7 @@
     </footer>
 
 
-    <!-- UPDATED JAVASCRIPT GRADING LOGIC -->
+    <!-- Javascript Grading Logic -->
     <script>
         function gradeQuiz() {
             let score = 0;
@@ -80,22 +80,22 @@
             if (q1 === "quic") { score++; output += "<p><strong>Q1 Correct!</strong></p>"; }
             else { output += "<p><strong>Q1 Incorrect.</strong> Correct answer: QUIC</p>"; }
 
-            // Question 2 – now correct = OPTION 1 (value = 1)
+            // Question 2 – correct = OPTION 1 (value = 1)
             let q2 = document.querySelector("input[name='q2']:checked");
             if (q2 && q2.value == "1") { score++; output += "<p>Q2 Correct!</p>"; }
             else { output += "<p>Q2 Incorrect. Correct answer: HTTP/0.9</p>"; }
 
-            // Question 3 – now correct = OPTION 3
+            // Question 3 – correct = OPTION 3
             let q3 = document.querySelector("input[name='q3']:checked");
             if (q3 && q3.value == "correct") { score++; output += "<p>Q3 Correct!</p>"; }
             else { output += "<p>Q3 Incorrect. Correct answer: Chunked transfer</p>"; }
 
-            // Question 4 – now correct = OPTION 1 (value = 1)
+            // Question 4 – correct = OPTION 1 (value = 1)
             let q4 = document.querySelector("input[name='q4']:checked");
             if (q4 && q4.value == "1") { score++; output += "<p>Q4 Correct!</p>"; }
             else { output += "<p>Q4 Incorrect. Correct answer: Steve Jobs</p>"; }
 
-            // Question 5 – unchanged
+            // Question 5 
             let correct = 
                 document.getElementById("q5a").checked &&
                 document.getElementById("q5b").checked &&
@@ -105,7 +105,7 @@
             if (correct) { score++; output += "<p>Q5 Correct!</p>"; }
             else { output += "<p>Q5 Incorrect. Correct answers: QUIC, Lower latency, Better for unstable networks</p>"; }
 
-            // Final score display
+            // Display Final Score
             let passFail = score >= 3 ? "PASS" : "FAIL";
             let color = score >= 3 ? "green" : "red";
 
