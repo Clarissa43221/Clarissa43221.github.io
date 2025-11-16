@@ -52,7 +52,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* Active Page Styling (optional) */
+/* Active Page Styling */
 nav a.active {
   background-color: #3f8f69;
   font-weight: bold;
