@@ -1,74 +1,196 @@
 /* === style.css === */
 
-/* General page styling */
+/* Reset & Base Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f7f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Navigation bar */
+/* General Links */
+a {
+  color: #2d8658;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: #1f5a3d;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #1a4731;
+}
+
+/* Updated Navigation Menu */
 nav {
-    background-color: #003366;
-    padding: 12px;
-    text-align: center;
+  background-color: #6bc49b; /* softer sage green */
+  padding: 12px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+  color: white;
+  margin: 0 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: 0.25s ease;
+  font-size: 1rem;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #cce0ff;
+  background-color: #4fae85;
+  transform: translateY(-2px);
 }
 
-/* Main content container */
+/* Active Page Styling */
+nav a.active {
+  background-color: #3f8f69;
+  font-weight: bold;
+}
+
+/* Main Content Wrapper */
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  padding: 25px;
+  max-width: 900px;
+  margin: 25px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
-/* Headings */
-h1, h2 {
-    color: #003366;
+/* Headings*/
+h1, h2, h3 {
+  color: #5ab58c;
+  margin-top: 0;
+  letter-spacing: 0.5px;
 }
 
-img {
-    display: block;
-    margin: 20px auto;
+/* Flex Section Boxes */
+.section-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Lists */
-ul {
-    padding-left: 20px;
+.section {
+  flex: 1;
+  min-width: 260px;
+  border: 1px solid #d9ece3;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fbfffd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Table Design for Concept Page*/
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+th, td {
+  border: 1px solid #74c7a0;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #2d8658;
+  color: white;
+  font-size: 1.05rem;
+}
+
+tr:nth-child(even) {
+  background-color: #f4faf7;
+}
+
+/* Quiz Buttons */
+button {
+  padding: 10px 16px;
+  background-color: #6bc49b;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px 5px 20px 0;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #4fae85;
+  transform: scale(1.03);
+}
+
+/* Results Box */
+#results {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #eef9f3;
+  border-left: 5px solid #6bc49b;
 }
 
 /* Footer */
 footer {
-    text-align: center;
+  text-align: center;
+  padding: 18px;
+  background-color: #6bc49b;
+  color: white;
+  font-size: 0.9em;
+  margin-top: 40px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+form {
+    background: #f8fff8;
     padding: 20px;
-    margin-top: 40px;
-    background-color: #003366;
+    border: 2px solid #2d8658;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background: #2d8658;
     color: white;
 }
 
-footer a {
-    color: #cce0ff;
+button[type="reset"] {
+    background: #ccc;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
+#results {
     margin-top: 20px;
     padding: 15px;
 }
