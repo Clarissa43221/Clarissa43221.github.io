@@ -14,21 +14,37 @@
         <a href="About.html">About</a>
         <a href="References.html">References</a>
         <a href="quiz.html">Quiz</a>
-
     </nav>
+    
     <!-- Info from my paper explaining the history of HTTP -->
     <main>
-        <h1>HTTP History & Early Versions</h1>
-        <p>HTTP (Hypertext Transfer Protocol) is the language that web browsers and servers use to communicate. It lets your browser request information and servers send back web pages, images, videos, and more (Wilde, 2025). Without HTTP, websites wouldn’t load, and the internet as we know it wouldn’t work. HTTP works at the top layer of the Internet Protocol Stack and relies on lower-level systems like TCP/IP to handle different types of content. This flexibility is part of why HTTP has become one of the most widely used protocols in the world (Mozilla, 2025).</p>
-        <!-- Example image -->
-        <img src="images/http_topic1.webp" alt="HTTP timeline" width="400">
-        <p>HTTP was created in the late 1980s and early 1990s by Tim Berners-Lee at CERN as part of his invention of the World Wide Web. He needed a way for computers to share documents through hyperlinks, which led to the creation of the first version, <strong>HTTP/0.9</strong>, in 1991. This version was very simple, only handling basic text and one-line requests. Even though it was basic, HTTP/0.9 showed how powerful the web could be and quickly gained users, which made improvements necessary.</p>
+        
+    <h1>HTTP History & Early Versions</h1>
+    <p>The internet is built upon key technologies that continue to develop and grow constantly. This technology allows computers to communicate with each other. One of the most important is the Hypertext Transfer Protocol, most commonly known as HTTP. Whether someone is streaming a video, clicking a link, or shopping online, HTTP is working in the background to make that information exchange possible. Rarely do users consider the background processes required to retrieve the information they request.</p>
 
-        <p>As websites became more complex, developers needed a protocol that could handle more types of requests. <strong>HTTP/1.0</strong>, introduced in 1996, added support for things like images, videos, and headers that gave extra information about requests and responses. It also introduced error codes, like 404 Not Found, so users could understand when something went wrong. These updates made websites more interactive and able to include multimedia content (Wikipedia, 2025). The downside was that HTTP/1.0 opened a new connection for every request, which slowed things down as the Internet grew.</p>
+    <p>HTTP is the language that web browsers and servers use to communicate. When you type a URL into a browser, such as <a href="https://www.amazon.com/">https://www.amazon.com/</a>, a request is sent by the browser using HTTP. Once the request is processed, the web server sends a response back, allowing you to see the webpage you requested. Without HTTP, websites would fail to load, and the internet as we know it would not function (Wilde, 2025). HTTP functions at the top layer of the Internet Protocol Stack and is considered an “application layer protocol,” building on lower-level systems like TCP/IP. This flexibility allows HTTP to handle various content types such as text, images, audio, and video (Mozilla, 2025).</p>
 
-        <p>Following its early growth, the protocol continued to evolve as the web became more dynamic and commercial. The release of <strong>HTTP/1.1</strong> in 1997 marked one of the biggest milestones in web history. This version introduced persistent connections, meaning a browser could request multiple files without reopening a new connection each time—greatly improving speed. It also added caching controls, improved security features, and support for virtual hosting, which allowed many websites to run on a single server. These enhancements helped the web scale from a research tool into a global communication and commerce platform.</p>
+    <!-- Example image -->
+    <img src="images/http_topic1.webp" alt="HTTP timeline" width="400">
 
-    </main>
+    <p>Hypertext Transfer Protocol originated in the late 1980s and early 1990s. Tim Berners-Lee, a scientist at CERN, created the World Wide Web and needed a way for computers to share documents via hyperlinks. This led to the creation of the first version, <strong>HTTP/0.9</strong>, in 1991. HTTP/0.9 was simple, only handling basic text and one-line requests. Despite its simplicity, it demonstrated the power of the web and quickly gained users, necessitating improvements.</p>
+
+    <p>As websites grew in complexity, a more advanced protocol became necessary. <strong>HTTP/1.0</strong>, introduced in 1996, added support for:</p>
+    <ul>
+        <li>Images, videos, and other file types</li>
+        <li>Headers that provided additional information about requests and responses</li>
+        <li>Error codes like 404 Not Found for invalid requests</li>
+    </ul>
+    <p>These features allowed interactive and multimedia-rich websites. However, HTTP/1.0 required opening a new connection for each request, slowing performance as the Internet expanded (Wikipedia, 2025).</p>
+
+    <h2>HTTP/1.1: Persistent Connections</h2>
+    <p>To overcome the limitations of HTTP/1.0, <strong>HTTP/1.1</strong> was introduced in 1997. This version enabled stable and persistent connections, allowing multiple requests over a single connection, significantly improving website loading speeds (W3C, 1999). Additional improvements included:</p>
+    <ul>
+        <li>Chunked transfer encoding</li>
+        <li>Caching controls</li>
+        <li>Improved error handling</li>
+    </ul>
+    <p>These enhancements contributed to the rapid growth of internet users, scaling from millions to billions worldwide.</p>
 
     <footer>
         Class Project - <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a>
