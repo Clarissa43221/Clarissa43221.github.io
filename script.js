@@ -1,3 +1,5 @@
+//JavaScript for Quiz
+
 function gradeQuiz() {
     let score = 0;
     let total = 5;
